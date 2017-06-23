@@ -2,6 +2,9 @@
 import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 import * as d3 from 'd3';
 
+// Imports models
+import { Data } from './data';
+
 @Component({
   selector: 'techradar-chart',
   templateUrl: './techradar-chart.component.html',
@@ -9,7 +12,7 @@ import * as d3 from 'd3';
 export class TechRadarCompoment {
 
   @Input()
-  public data: any = null;
+  public data: Data = null;
 
   @Input()
   public radius: number = 300;
@@ -23,10 +26,10 @@ export class TechRadarCompoment {
   @Output()
   public onClick = new EventEmitter();
 
-  private dataset: any = null;
+  private dataset: Data = null;
   private svg: any = null;
   private width: number;
-  private margin: any;
+  private margin: { top: number, bottom: number, left: number, right: number };
   private scale: any;
 
   constructor(private elementRef: ElementRef) {

@@ -1,7 +1,7 @@
 {
   "name": "tech-radar-chart",
-  "version": "1.0.14",
-  "description": "Tech Radar Chart Component (Angular and D3)",
+  "version": "1.0.15",
+  "description": "Tech Radar Chart Component (Angular & D3)",
   "main": "index.ts",
   "scripts": {
     "lint": "tslint --fix ./lib/**/*.ts"
